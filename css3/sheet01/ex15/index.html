@@ -5,10 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ejercicio 15</title>
 		<style>
-			.flex-container .center-item {
+			.flex-container {
+				--dim: 300px;
+				background-color: aqua;
+				width: var(--dim);
+				height: var(--dim);
 				display: flex;
-				height: 1200px;
 				justify-content: center;
+			}
+			.center-item {
+				display: flex;
 				align-items: center;
 			}
 		</style>
