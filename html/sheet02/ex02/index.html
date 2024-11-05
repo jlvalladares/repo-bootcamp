@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form>
+			<div>
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="user_name" size="30" required />
+			</div>
+			<div>
+				<label for="apellidos">Apellidos:</label>
+				<input type="text" id="apellidos" name="user_name" size="30" required />
+			</div>
+			<div>
+				<label for="fecha_nacimiento">Fecha de nacimiento:</label>
+				<input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required />
+			</div>
+			<div>
+				<p>Genero:</p>
+				<input type="radio" id="masculino" name="Genero" value="Masculino" required />
+				<label for="masculino">Masculino</label>
+				<br />
+				<input type="radio" id="femenino" name="Genero" value="Femenino" />
+				<label for="femenino">Femenino</label>
+				<br />
+				<input type="radio" id="otro" name="Genero" value="Otro" />
+				<label for="otro">Otro</label>
+				<br />
+				<br />
+			</div>
+			<div>
+				<label for="mail">Correo electrónico:</label>
+				<input type="email" id="mail" name="mail" required />
+			</div>
+			<div>
+				<label for="phone">Numero de telefono:</label>
+				<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required />
+			</div>
+
+			<div>
+				<label for="asunto">Asunto:</label>
+				<select id="asunto" name="asunto" size="3">
+					<option value="prespuesto">Pedir prespuesto</option>
+					<option value="cita">Solicitar cita previa</option>
+					<option value="Otros">Otros</option>
+				</select>
+			</div>
+
+			<div>
+				<p>¿Como no has cococido?</p>
+				<input type="checkbox" id="amigo" name="amigo" value="Un amigo" />
+				<label for="amigo">Un amigo</label>
+				<br />
+				<input type="checkbox" id="googleando" name="googleando" value="gogleando" />
+				<label for="googleando">Googleando</label>
+				<br />
+				<input type="checkbox" id="buzon" name="buzon" value="Buzoneo" />
+				<label for="buzon">Buzoneo</label>
+				<br />
+				<input type="checkbox" id="otross" name="otross" value="Otros" />
+				<label for="otross">Otros</label>
+			</div>
+			<br />
+			<div>
+				<label for="msg">Mensaje:</label>
+				<textarea id="msg" name="user_message" maxlength="300"></textarea>
+			</div>
+			<div>
+				<input type="radio" id="cumplimiento" name="rgpd" value="Aceptacion de clausula rgpd" required />
+				<label for="cumplimiento">
+					He leido y acepto el
+					<a href="#">legal</a>
+					y la
+					<a href="#">politica de privacidad</a>
+				</label>
+			</div>
+
+			<div class="button">
+				<button type="submit">Ahi va eso</button>
+			</div>
+		</form>
+	</body>
+</html>
