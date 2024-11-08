@@ -1,5 +1,7 @@
 body {
-	padding: 80px;
+	margin: 0%;
+	padding-top: 10px;
+
 	background-color: yellow;
 }
 * {
@@ -13,8 +15,8 @@ body {
 	justify-content: center;
 	display: grid;
 	grid-template-columns: repeat(3, minmax(100px, 177px));
-	row-gap: 50px;
-	column-gap: 30px;
+	row-gap: 3%;
+	column-gap: 3%;
 	background-color: yellow;
 }
 
@@ -33,20 +35,20 @@ body {
 			left: 0;
 			bottom: 0;
 			background-color: rgb(139, 138, 138);
-			font-size: 10px;
+			font-size: 0.5em;
 			padding: 4px;
 			color: rgb(169, 92, 3);
 		}
 	}
 	.caja_inf {
-		padding: 15px;
-		margin-right: 50px;
+		padding: 8% 4% 10% 9%;
 		width: min-content;
 		div {
 			border-left: 2px solid rgb(214, 113, 41);
 			color: rgb(225, 120, 29);
-			padding-left: 5px;
+			padding-left: 4%;
 			width: max-content;
+			font-size: smaller;
 			span {
 				color: black;
 				font-size: 1rem;
@@ -57,14 +59,14 @@ body {
 			display: flex;
 			padding: 0px;
 			margin: 0px;
-			margin-bottom: 25px;
+			margin-bottom: 18%;
 			border: 2px;
-			gap: 5px;
+			gap: 2%;
 			li {
 				border: solid 1px gray;
 				border-radius: 10%;
-				font-size: 12px;
-				padding: 1px;
+				font-size: 0.5em;
+				padding: 1%;
 			}
 		}
 	}
@@ -74,14 +76,22 @@ body {
 	padding: 0px;
 	margin: 0px;
 	border: 0px;
+	font-size: 1em;
 }
 .buscador {
 	display: flex;
 	justify-content: center;
-	padding: 40px;
-
-	#name {
+	padding: 5%;
+	#buscar {
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		text-align: center;
+	}
+}
+@media (width<=915px) {
+	.listado {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		row-gap: 1.5em;
 	}
 }
