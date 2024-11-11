@@ -1,8 +1,8 @@
 body {
 	margin: 0%;
 	padding-top: 10px;
-
 	background-color: yellow;
+	font-family: ubuntu, Arial, Helvetica, sans-serif;
 }
 * {
 	box-sizing: border-box;
