@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Wireframe Example</title>
-		<style>
-			body {
-				font-family: Arial, sans-serif;
-				margin: 0;
-				padding: 0;
-			}
-			.container {
-				width: 80%;
-				margin: 0 auto;
-				padding: 20px;
-				border: 1px solid #ccc;
-			}
-			header,
-			nav,
-			main,
-			aside,
-			footer {
-				border: 1px solid #000;
-				margin: 10px 0;
-				padding: 10px;
-			}
-			header {
-				height: 100px;
-				background-color: ;
-			}
-			nav {
-				height: 50px;
-				background-color: gray;
-			}
-			main {
-				height: 300px;
-			}
-			aside {
-				height: 200px;
-			}
-			footer {
-				height: 50px;
-				background-color: gray;
-			}
-		</style>
+		<title>Wireframe</title>
 	</head>
-	<body>
-		<div class="container">
-			<header>Header</header>
-			<nav>Navigation</nav>
-			<main>Main Content</main>
-			<aside>Sidebar</aside>
-			<footer>Footer</footer>
+	<body style="margin: 0; padding: 0; font-family: Arial, sans-serif">
+		<div class="container" style="width: 80%; margin: 0 auto; padding: 20px">
+			<header style="display: flex; justify-content: space-between; height: 20px; margin: 20px 0; padding: 0 30px">
+				<h2 style="margin: 0">TRADE</h2>
+				<nav>
+					<a href="#" style="font-size: 11px; margin-right: 5px; margin-left: 5px">Link 1</a>
+					<a href="#" style="font-size: 11px; margin-right: 5px; margin-left: 5px">Link 2</a>
+					<a href="#" style="font-size: 11px; margin-right: 5px; margin-left: 5px">Link 3</a>
+					<a href="#" style="font-size: 11px; margin-right: 5px; margin-left: 5px">Link 4</a>
+					<button class="button" style="font-size: 12px; padding: 0; width: 80px; height: 30px; border-radius: 10%">Sign Up</button>
+				</nav>
+			</header>
+
+			<main
+				style="
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					height: 350px;
+					background-color: rgba(190, 184, 184, 0.26);
+					margin: 25px 0;
+					padding: 10px;
+				"
+			>
+				<h3>Ready to get started?</h3>
+				<p style="width: 300px; text-align: center">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore magna aliqua
+				</p>
+				<button style="background-color: black; color: antiquewhite; width: 13%; height: 15%; border-radius: 8%">Start free trial</button>
+			</main>
+			<div
+				style="
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					align-items: center;
+					height: 400px;
+					margin: 10px 0;
+					padding: 10px;
+				"
+			>
+				<h4>Your Best Value Proposition</h4>
+				<div style="text-align: center; width: 650px; margin-bottom: 50px">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enimad minim veniam
+				</div>
+				<div style="background-color: black; width: 200px; height: 200px"></div>
+				<div style="background-color: black; width: 200px; height: 200px"></div>
+				<div style="background-color: black; width: 200px; height: 200px"></div>
+			</div>
+			<div style="display: grid; grid-template-columns: 200px 200px 200px; justify-content: space-around; height: 40px; padding-left: 1%">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<a href="#">Learn more</a>
+				<a href="#">Learn more</a>
+				<a href="#">Learn more</a>
+			</div>
+			<footer style="height: 150px; background-color: rgba(190, 184, 184, 0.26); margin-top: 10%; padding-top: 10px">Footer</footer>
 		</div>
 	</body>
 </html>
