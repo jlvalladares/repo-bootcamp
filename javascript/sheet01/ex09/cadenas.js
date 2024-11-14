@@ -1,23 +1,15 @@
-let cad = prompt("Introduce una pabra/frase para invertir el orden de las letras:");
-//cad = "Hola"
+let cad = prompt("Intoduce una palabra/frase;");
+let vocales = ["a", "e", "i", "o", "u"];
 function invertirCadena(cad) {
-	//let separaCadena = cad.split("");
-	//let invertirArreglo = separaCadena.reverse();
-	//let unirArreglo = invertirArreglo.join("");
-	//return unirArreglo;
 	return cad.split("").reverse().join("");
 }
-invertirCadena(cad);
-//aloH
-
-let vocales = ["a", "e", "i", "o", "u"];
-function contarVocales(arr) {
+function contarVocales(cad) {
 	let cont = 0;
-	for (let i of arr.toLowerCase()) {
+	for (let i of cad.toLowerCase()) {
 		if (vocales.includes(i)) {
 			cont++;
 		}
 	}
 	return cont;
 }
-contarVocales(arr);
+console.log("La palabra invertida es", invertirCadena(cad), "y tiene", contarVocales(cad), "vocales");
