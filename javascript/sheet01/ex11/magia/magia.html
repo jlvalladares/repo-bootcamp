@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			#miDiv {
+				width: 200px;
+				height: 200px;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="miDiv"></div>
+		<script>
+			const miDiv = document.getElementById("miDiv");
+			miDiv.addEventListener("mouseover", () => {
+				miDiv.style.backgroundColor = "green";
+			});
+			miDiv.addEventListener("mouseout", () => {
+				miDiv.style.backgroundColor = "black";
+			});
+		</script>
+	</body>
+</html>
