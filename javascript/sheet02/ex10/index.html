@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const palabras = ["hola", "mundo", "javascript", "lol"];
+			function encontrarPalabraMasLarga(palabras) {
+				let palabraMasLarga = palabras[0];
+				return palabras.reduce((palabraMasLarga, palabraActual) => {
+					if (palabraActual.length > palabraMasLarga.length) {
+						palabraMasLarga = palabraActual;
+					}
+					return palabraMasLarga;
+				}, palabraMasLarga);
+			}
+			console.log(encontrarPalabraMasLarga(palabras));
+		</script>
+	</body>
+</html>
