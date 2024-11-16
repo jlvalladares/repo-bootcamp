@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<img id="imagen" src="https://www.educima.com/imagen-triste-s19861.jpg" alt="imagen-triste" width="180px" height="250px" />
+		<button id="boton">Click para cambiar</button>
+		<script>
+			const imagen = document.getElementById("imagen");
+			const boton = document.getElementById("boton");
+			function cambiarImagen() {
+				const imgActual = imagen.src;
+				if (imgActual === "https://www.educima.com/imagen-alegre-s19863.jpg") {
+					imagen.src = "https://www.educima.com/imagen-triste-s19861.jpg";
+				} else {
+					imagen.src = "https://www.educima.com/imagen-alegre-s19863.jpg";
+				}
+			}
+			boton.addEventListener("click", cambiarImagen);
+		</script>
+	</body>
+</html>
