@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const texto = "A man, a plan, a canal, Panama";
+			function esPalindromo(cadena) {
+				const cadMin = cadena.toLowerCase();
+				const cadLimpia = cadMin.replace(/[^a-z0-9]/gi, "");
+				const cadInvertida = cadLimpia.split("").reverse().join("");
+				return cadLimpia === cadInvertida;
+			}
+			console.log(texto);
+			console.log(esPalindromo(texto));
+			console.log(esPalindromo("Hola mundo"));
+		</script>
+	</body>
+</html>
