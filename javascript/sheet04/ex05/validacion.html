@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ejercicio 5</title>
+	</head>
+	<body>
+		<form id="formulario">
+			<input type="text" id="nombre" placeholder="Ingresa tu nombre" />
+			<button type="submit">Enviar</button>
+			<p id="error" style="display: none"></p>
+		</form>
+		<script>
+			const formulario = document.getElementById("formulario");
+			const inputNombre = document.getElementById("nombre");
+			const mensajeError = document.getElementById("error");
+
+			formulario.addEventListener("submit", (event) => {
+				event.preventDefault();
+
+				if (inputNombre.value === "") {
+					mensajeError.textContent = "Por favor, rellena el campo.";
+					mensajeError.style.color = "red";
+					mensajeError.style.display = "block";
+				} else {
+					("El formulario se ha enviado correctamente");
+				}
+			});
+		</script>
+	</body>
+</html>
