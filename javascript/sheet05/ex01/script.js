@@ -1,4 +1,4 @@
-const listaPokemon = document.querySelector("#listaPokemon");
+//const listaPokemon = document.querySelector("#listaPokemon");
 
 async function fetchData(url) {
 	const response = await fetch(url);
@@ -16,6 +16,7 @@ async function obtenerDatos() {
 		mostrarPokemon(pokemonData);
 	}
 }
+obtenerDatos();
 
 function mostrarPokemon(poke) {
 	let tipos = poke.types.map((type) => `<li class="${type.type.name}">${type.type.name}</li>`);
@@ -45,27 +46,5 @@ function mostrarPokemon(poke) {
 					}
         </div>
     `;
-	listaPokemon.appendChild(div);
+	listaPokemon.append(div);
 }
-
-obtenerDatos();
-/*
-
-        <div class="pokemon">
-          <div class="caja_sup">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivisaur" />
-            <div class="id">ID/2</div>
-          </div>
-          <div class="caja_inf">
-            <h3 class="pokemon-nombre">Ivisaur</h3>
-            <ul style="list-style-type: none">
-              <li>Poisson</li>
-              <li>Grass</li>
-            </ul>
-            <div>
-              Evoluciona de:
-              <span>Bulvasur</span>
-            </div>
-          </div>
-        </div>
-*/

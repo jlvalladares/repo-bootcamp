@@ -1,48 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista Pokemón</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet" />
-  </head>
-
-  <body>
-    <div class="buscador">
-      <label for="buscar"></label>
-      <input type="text" id="buscar" name="busca" placeholder="Filtra pokemons por nombre" autocomplete="additional-name" />
-    </div>
-    <div class="oreja_iz"></div>
-    <div class="oreja_de"></div>
-    <div class="mof_iz"></div>
-    <div class="mof_de"></div>
-    <div id="todos">
-      <div class="pokemon-todos" id="listaPokemon">
-        <!--<div class="pokemon">
-          <div class="caja_sup">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Ivisaur" />
-            <div class="id">ID/2</div>
-          </div>
-          <div class="caja_inf">
-            <h3 class="pokemon-nombre">Ivisaur</h3>
-            <ul style="list-style-type: none">
-              <li>Poisson</li>
-              <li>Grass</li>
-            </ul>
-            <div class="evolucion">
-              Evoluciona de:
-              <span>Bulvasur</span>
-            </div>
-          </div>
-        </div>
-      </div>-->
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista Pokemón</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="buscador">
+			<label for="buscar"></label>
+			<input type="text" id="buscar" name="buscar" placeholder="Filtra pokemons por nombre" autocomplete="additional-name" />
+		</div>
+		<div class="oreja_iz"></div>
+		<div class="oreja_de"></div>
+		<div class="mof_iz"></div>
+		<div class="mof_de"></div>
+		<div id="todos">
+			<div class="pokemon-todos" id="listaPokemon"></div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
