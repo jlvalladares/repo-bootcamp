@@ -48,3 +48,12 @@ function mostrarPokemon(poke) {
     `;
 	listaPokemon.append(div);
 }
+async function buscarPokemon() {
+  let input = document.getElementById('buscar').value
+  let x = document.getElementsByClassName('pokemon-nombre');
+  for (i = 0; i < 150; i++) { 
+    const pokemonData = await fetchData(`${URL}/${i}/`);
+    console.log(pokemonData);
+  }
+}
+buscarPokemon();
