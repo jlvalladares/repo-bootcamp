@@ -1,11 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-  mostrarPokemon();
-  buscarPokemon();
-})
+document.addEventListener("DOMContentLoaded", () => {
+	buscarPokemon();
+});
 
-
-
-const listaPokemon = document.querySelector("#listaPokemon");
+let listaPokemon = document.querySelector("#listaPokemon");
 
 async function fetchData(url) {
 	const response = await fetch(url);
@@ -56,6 +53,7 @@ function mostrarPokemon(poke) {
     `;
 	listaPokemon.append(div);
 }
- function buscarPokemon(){
-    
- }
+
+let search = document.getElementById("search");
+
+obtenerDatos();
