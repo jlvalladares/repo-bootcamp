@@ -69,6 +69,9 @@ body {
 		}
 	}
 }
+.evolucion {
+	text-transform: capitalize;
+}
 .caja_inf > h3 {
 	border: solid;
 	padding: 0px;
@@ -84,12 +87,20 @@ body {
 	#buscar {
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		text-align: center;
-	}
-	#buscar {
 		width: 600px;
 	}
 }
 @media (width<=715px) {
+	.buscador {
+		display: flex;
+		justify-content: center;
+		padding: 5%;
+		#buscar {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			text-align: center;
+			width: 350px;
+		}
+	}
 	.pokemon-todos {
 		padding: 0% 15%;
 		display: flex;

@@ -1,4 +1,11 @@
-//const listaPokemon = document.querySelector("#listaPokemon");
+document.addEventListener('DOMContentLoaded', () => {
+  mostrarPokemon();
+  buscarPokemon();
+})
+
+
+
+const listaPokemon = document.querySelector("#listaPokemon");
 
 async function fetchData(url) {
 	const response = await fetch(url);
@@ -16,6 +23,7 @@ async function obtenerDatos() {
 		mostrarPokemon(pokemonData);
 	}
 }
+
 obtenerDatos();
 
 function mostrarPokemon(poke) {
@@ -48,12 +56,6 @@ function mostrarPokemon(poke) {
     `;
 	listaPokemon.append(div);
 }
-async function buscarPokemon() {
-  let input = document.getElementById('buscar').value
-  let x = document.getElementsByClassName('pokemon-nombre');
-  for (i = 0; i < 150; i++) { 
-    const pokemonData = await fetchData(`${URL}/${i}/`);
-    console.log(pokemonData);
-  }
-}
-buscarPokemon();
+ function buscarPokemon(){
+    
+ }
