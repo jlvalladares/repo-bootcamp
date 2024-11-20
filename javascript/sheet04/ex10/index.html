@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ejercicio 10</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<form id="formulario">
+			<input type="email" id="correo" placeholder="Ingres a tu correo electrónico" />
+			<input type="text" placeholder="Ingresa tu dirección" />
+			<button type="submit" on>Enviar</button>
+			<script>
+				// Obtener el campo de correo
+				const correo = document.getElementById("correo");
+
+				// Función para validar el campo de correo
+				correo.addEventListener("blur", function () {
+					// Si el campo está vacío, agregamos clase 'error' y configuramos el error de validación
+					if (correo.value.trim() === "") {
+						correo.classList.remove("exito"); // Quitamos la clase 'exito' si está
+						correo.classList.add("error"); // Agregamos la clase 'error'
+						correo.setCustomValidity("Este campo debe estar relleno"); // Error de validación
+					} else {
+						correo.classList.remove("error"); // Quitamos la clase 'error'
+						correo.classList.add("exito"); // Agregamos la clase 'exito'
+						correo.setCustomValidity(""); // Limpiamos cualquier mensaje de error
+					}
+				});
+			</script>
+		</form>
+	</body>
+</html>
