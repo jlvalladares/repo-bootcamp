@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+	mostrarPokemon();
 	buscarPokemon();
 });
 
-let listaPokemon = document.querySelector("#listaPokemon");
+const listaPokemon = document.querySelector("#listaPokemon");
 
 async function fetchData(url) {
 	const response = await fetch(url);
@@ -40,20 +41,16 @@ function mostrarPokemon(poke) {
           </ul>
           ${
 						poke.evolucion
-							? `
-          <div class="evolucion">
+							? `<div class="evolucion">
             Evoluciona de:
             <span>${poke.evolucion}</span>
-          </div>`
+            </div>`
 							: `<div>
             <span></br><br></span>
-          </div>`
+            </div>`
 					}
         </div>
     `;
-	listaPokemon.append(div);
+	listaPokemon.appendChild(div);
 }
-
-let search = document.getElementById("search");
-
-obtenerDatos();
+function buscarPokemon() {}
