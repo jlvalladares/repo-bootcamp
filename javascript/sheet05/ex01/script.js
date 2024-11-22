@@ -1,19 +1,8 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-  mostrarPokemon();
-  buscarPokemon();
-})
-
-
-
-const listaPokemon = document.querySelector("#listaPokemon");
-
 async function fetchData(url) {
 	const response = await fetch(url);
 	const json = await response.json();
 	return json;
 }
-
 
 async function obtenerDatos() {
 	let URL = "https://pokeapi.co/api/v2/pokemon/";
@@ -29,7 +18,7 @@ async function obtenerDatos() {
 obtenerDatos();
 
 function mostrarPokemon(poke) {
-	let tipos = poke.types.map((type) => `<li class="${type.type.name}">${type.type.name}</li>`);
+	let tipos = poke.types.map((type) => `<li>${type.type.name}</li>`);
 	tipos = tipos.join("");
 	const div = document.createElement("div");
 	div.classList.add("pokemon");
@@ -45,34 +34,31 @@ function mostrarPokemon(poke) {
           </ul>
           ${
 						poke.evolucion
-							? `
-          <div class="evolucion">
+							? `<div class="evolucion">
             Evoluciona de:
             <span>${poke.evolucion}</span>
-          </div>`
+            </div>`
 							: `<div>
             <span></br><br></span>
-          </div>`
+            </div>`
 					}
         </div>
     `;
-	listaPokemon.append(div);
+	listaPokemon.appendChild(div);
 }
 
+let listaPokemon = document.querySelector("#listaPokemon");
 let search = document.getElementById("search");
 
 async function buscarPokemon() {
-	let URL = "https://pokeapi.co/api/v2/pokemon/";
-	for (let i = 1; i <= 151; i++) {
-		const pokemonData = await fetchData(`${URL}/${i}/`);
-	}
-
-	search.addEventListener("input", (e) => {
+	search.addEventListener("keyup", (e) => {
 		const inputText = e.target.value.toLowerCase().trim();
-		const filtrado = pokemonData.filter((poke) => poke.name == inputText);
+		const mostrarFiltrado = nombresPokemos.filter((nombre) => nombre.name.startsWith(inputText));
+		mostrarPokemon(mostrarFiltrado);
 	});
 }
- function buscarPokemon(){
-    
- }
 
+document.addEventListener("DOMContentLoaded", () => {
+	mostrarPokemon();
+	buscarPokemon();
+});
