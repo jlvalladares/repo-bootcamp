@@ -1,7 +1,13 @@
 import Tarjeta from "./Tarjeta";
 
-const arrayTarjetas = [{ Tarjeta, Tarjeta, Tarjeta }];
-function ListaDeTarjetas(arrayTarjetas) {
-	return <>arrayTarjetas.map(Tarjeta);</>;
+function ListaDeTarjetas({ listaDePersonas }) {
+	return (
+		<>
+			<Tarjeta {...listaDePersonas[0]}></Tarjeta>
+			<Tarjeta {...listaDePersonas[1]}></Tarjeta>
+			<Tarjeta {...listaDePersonas[2]}></Tarjeta>
+		</>
+	);
 }
+
 export default ListaDeTarjetas;
