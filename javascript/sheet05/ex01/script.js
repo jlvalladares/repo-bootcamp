@@ -1,14 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-	buscarPokemon();
-});
 
-let listaPokemon = document.querySelector("#listaPokemon");
+document.addEventListener('DOMContentLoaded', () => {
+  mostrarPokemon();
+  buscarPokemon();
+})
+
+
+
+const listaPokemon = document.querySelector("#listaPokemon");
 
 async function fetchData(url) {
 	const response = await fetch(url);
 	const json = await response.json();
 	return json;
 }
+
 
 async function obtenerDatos() {
 	let URL = "https://pokeapi.co/api/v2/pokemon/";
@@ -67,3 +72,7 @@ async function buscarPokemon() {
 		const filtrado = pokemonData.filter((poke) => poke.name == inputText);
 	});
 }
+ function buscarPokemon(){
+    
+ }
+
