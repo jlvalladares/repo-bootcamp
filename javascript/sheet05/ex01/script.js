@@ -1,3 +1,4 @@
+
 async function fetchData(url) {
 	const response = await fetch(url);
 	const json = await response.json();
@@ -45,12 +46,16 @@ function mostrarPokemon(poke) {
         </div>
     `;
 	listaPokemon.appendChild(div);
+
+}
+function buscarPokemon() {}
+
 }
 
 let listaPokemon = document.querySelector("#listaPokemon");
 let search = document.getElementById("search");
 
-async function buscarPokemon() {
+function buscarPokemon() {
 	search.addEventListener("keyup", (e) => {
 		const inputText = e.target.value.toLowerCase().trim();
 		const mostrarFiltrado = nombresPokemos.filter((nombre) => nombre.name.startsWith(inputText));
@@ -62,3 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
 	mostrarPokemon();
 	buscarPokemon();
 });
+
