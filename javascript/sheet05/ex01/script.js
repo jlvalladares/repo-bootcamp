@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-	buscarPokemon();
-});
-
-let listaPokemon = document.querySelector("#listaPokemon");
-
 async function fetchData(url) {
 	const response = await fetch(url);
 	const json = await response.json();
@@ -40,30 +34,37 @@ function mostrarPokemon(poke) {
           </ul>
           ${
 						poke.evolucion
-							? `
-          <div class="evolucion">
+							? `<div class="evolucion">
             Evoluciona de:
             <span>${poke.evolucion}</span>
-          </div>`
+            </div>`
 							: `<div>
             <span></br><br></span>
-          </div>`
+            </div>`
 					}
         </div>
     `;
-	listaPokemon.append(div);
+	listaPokemon.appendChild(div);
 }
 
+let listaPokemon = document.querySelector("#listaPokemon");
 let search = document.getElementById("search");
 
 async function buscarPokemon() {
-	let URL = "https://pokeapi.co/api/v2/pokemon/";
-	for (let i = 1; i <= 151; i++) {
-		const pokemonData = await fetchData(`${URL}/${i}/`);
-	}
-
-	search.addEventListener("input", (e) => {
+	search.addEventListener("keyup", (e) => {
 		const inputText = e.target.value.toLowerCase().trim();
-		const filtrado = pokemonData.filter((poke) => poke.name == inputText);
+		const mostrarFiltrado = nombresPokemos.filter((nombre) => nombre.name.startsWith(inputText));
+		mostrarPokemon(mostrarFiltrado);
 	});
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	mostrarPokemon();
+	buscarPokemon();
+});
+//function limpiarHTML(){
+//  while (resultado.firstChild) {
+//    resultado.removeChlild(resultado.firstChild)
+//  }
+//}
+//limpiarHTML();
