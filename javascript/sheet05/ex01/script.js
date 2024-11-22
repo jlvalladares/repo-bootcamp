@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-	mostrarPokemon();
-	buscarPokemon();
-});
-
-const listaPokemon = document.querySelector("#listaPokemon");
 
 async function fetchData(url) {
 	const response = await fetch(url);
@@ -25,7 +19,7 @@ async function obtenerDatos() {
 obtenerDatos();
 
 function mostrarPokemon(poke) {
-	let tipos = poke.types.map((type) => `<li class="${type.type.name}">${type.type.name}</li>`);
+	let tipos = poke.types.map((type) => `<li>${type.type.name}</li>`);
 	tipos = tipos.join("");
 	const div = document.createElement("div");
 	div.classList.add("pokemon");
@@ -52,5 +46,25 @@ function mostrarPokemon(poke) {
         </div>
     `;
 	listaPokemon.appendChild(div);
+
 }
 function buscarPokemon() {}
+
+}
+
+let listaPokemon = document.querySelector("#listaPokemon");
+let search = document.getElementById("search");
+
+function buscarPokemon() {
+	search.addEventListener("keyup", (e) => {
+		const inputText = e.target.value.toLowerCase().trim();
+		const mostrarFiltrado = nombresPokemos.filter((nombre) => nombre.name.startsWith(inputText));
+		mostrarPokemon(mostrarFiltrado);
+	});
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	mostrarPokemon();
+	buscarPokemon();
+});
+
