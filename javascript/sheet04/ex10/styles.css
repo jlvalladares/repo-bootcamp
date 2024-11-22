@@ -1,0 +1,8 @@
+.error {
+	border: 2px solid red;
+	background-color: #ffe6e6;
+}
+.exito {
+	border: 2px solid green;
+	background-color: #e6ffe6;
+}
