@@ -2,5 +2,5 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"htmlWhitespaceSensitivity": "ignore",
-	"printWidth": 140
+	"printWidth": 80
 }
