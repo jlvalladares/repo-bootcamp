@@ -9,7 +9,7 @@ async function fetchData(url) {
 let pokeTodos = [];
 let contador = 0;
 async function obtenerDatos() {
-	const pokemonData = await fetchData("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0");
+	const pokemonData = await fetchData("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
 	for (const pokemon of pokemonData.results) {
 		const bicho = await fetchData(pokemon.url);
 		const nombre = await fetchData(bicho.species.url);
