@@ -103,6 +103,10 @@ div.buscador {
 }
 
 @media (width<=750px) {
+	.todos {
+		display: flex;
+		justify-content: center;
+	}
 	.buscador {
 		display: flex;
 		border: rgba(236, 235, 235, 0.959);
