@@ -1,11 +1,11 @@
 import React from "react";
-import Card from "./Carta";
+import Carta from "./Carta";
 
 function ListaDeCard({ pokemon }) {
 	return (
 		<>
 			{pokemon.map((card) => (
-				<Card
+				<Carta
 					key={card.nombre}
 					imagenUrl={card.imagenUrl}
 					nombre={card.nombre}
@@ -13,7 +13,7 @@ function ListaDeCard({ pokemon }) {
 					tipo1={card.tipo1}
 					tipo2={card.tipo2}
 					evolucion={card.evolucion}
-				></Card>
+				></Carta>
 			))}
 		</>
 	);

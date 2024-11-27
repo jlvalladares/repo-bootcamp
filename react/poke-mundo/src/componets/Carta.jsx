@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ imagenUrl, nombre, id, tipo1, tipo2, evolucion }) {
+function Carta({ imagenUrl, nombre, id, tipo1, tipo2, evolucion }) {
 	return (
 		<>
 			<div className="card">
@@ -19,6 +19,7 @@ function Card({ imagenUrl, nombre, id, tipo1, tipo2, evolucion }) {
 						</li>
 					</ul>
 					<div className="evolucion">
+						Evoluciona de: <br />
 						<span>{evolucion}</span>
 					</div>
 				</div>
@@ -27,4 +28,4 @@ function Card({ imagenUrl, nombre, id, tipo1, tipo2, evolucion }) {
 	);
 }
 
-export default Card;
+export default Carta;
