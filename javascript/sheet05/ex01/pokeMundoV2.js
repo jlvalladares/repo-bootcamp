@@ -7,15 +7,19 @@ async function fetchData(url) {
 	return json;
 }
 let pokeTodos = [];
-let contador = 0;
 async function obtenerDatos() {
-	const pokemonData = await fetchData("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
+	const pokemonData = await fetchData(
+		"https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
+	);
 	for (const pokemon of pokemonData.results) {
+		let contador = 0;
 		const bicho = await fetchData(pokemon.url);
 		const nombre = await fetchData(bicho.species.url);
 		pokemon.evolucion = nombre.evolves_from_species?.name;
 		pokemon.id = bicho.id;
-		pokemon.tipos = bicho.types.map((type) => `<li class="${type.type.name}">${type.type.name}</li>`).join("");
+		pokemon.tipos = bicho.types
+			.map((type) => `<li class="${type.type.name}">${type.type.name}</li>`)
+			.join("");
 		pokemon.img = bicho.sprites.front_default;
 		pokeTodos.push(pokemon);
 		mostrarPokemon(pokeTodos[contador]);
@@ -56,7 +60,9 @@ const search = document.getElementById("search");
 function buscarPokemon() {
 	search.addEventListener("keyup", (e) => {
 		const inputText = e.target.value.toLowerCase().trim();
-		const filtrado = pokeTodos.filter((nombre) => nombre.name.startsWith(inputText));
+		const filtrado = pokeTodos.filter((nombre) =>
+			nombre.name.startsWith(inputText)
+		);
 		limpiarHtml();
 		filtrado.forEach((pokemon) => {
 			mostrarPokemon(pokemon);

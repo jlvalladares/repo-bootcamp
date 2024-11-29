@@ -1,5 +1,6 @@
 import React from "react";
-import Carta from "./Carta";
+
+import Carta from "../componets/Carta";
 
 function ListaDeCard({ pokemon }) {
 	return (
@@ -10,8 +11,7 @@ function ListaDeCard({ pokemon }) {
 					imagenUrl={card.imagenUrl}
 					nombre={card.nombre}
 					id={card.id}
-					tipo1={card.tipo1}
-					tipo2={card.tipo2}
+					tipos={card.tipos}
 					evolucion={card.evolucion}
 				></Carta>
 			))}
