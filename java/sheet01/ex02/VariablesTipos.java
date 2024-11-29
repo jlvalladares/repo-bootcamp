@@ -13,4 +13,4 @@ public class VariablesTipos {
         System.out.println("Caracter: " + a);
         System.out.println("Cadena de texto: " + cadenaTexto);
     }
-}
+} 
