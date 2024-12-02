@@ -15,5 +15,5 @@ public class Palindromo {
             } else {
                 System.out.println("La cadena no es un palíndromo.");
             }
-}
+        }
 }
