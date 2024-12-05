@@ -1,4 +1,4 @@
-#[Ejercicios planteados en la pagina: https://sqlbolt.com/](https://sqlbolt.com/)
+#Ejercicion planteados en la pagina[https://sqlbolt.com/]
 
 ##Solucion al ejercicio 1: SQL Lesson 1: SELECT queries 101.
 
