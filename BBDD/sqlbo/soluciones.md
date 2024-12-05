@@ -1,4 +1,6 @@
-#[Ejercicios planteados en la pagina:](https://sqlbolt.com/) ###Solucion al ejercicio 1: SQL Lesson 1: SELECT queries 101.
+[#Ejercicios planteados en la pagina:](https://sqlbolt.com/);
+
+###Solucion al ejercicio 1: SQL Lesson 1: SELECT queries 101.
 
 #### Task1: `SELECT Title FROMmovies;`
 
