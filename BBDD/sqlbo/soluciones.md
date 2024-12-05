@@ -41,3 +41,11 @@
 #### Task3: `select title from movies order by title limit 5;`
 
 #### Task4: `select title from movies order by title limit 5 offset 5;`
+
+## SQL Review: Simple SELECT Queries
+
+#### Task1: `SELECT * FROM north_american_cities where country like 'canada';`
+
+#### Task2: `SELECT * FROM north_american_cities where country like 'uni%' order by latitude desc;`
+
+#### Task3: ``
