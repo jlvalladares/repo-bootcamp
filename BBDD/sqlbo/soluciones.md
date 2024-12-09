@@ -117,3 +117,9 @@
 #### Task2: `SELECT * FROM buildings;`
 
 #### Task3: `SELECT DISTINCT building_name, role FROM buildings left join employees on building_name=building;`
+
+## SQL Lesson 8: A short note on NULLs
+
+#### Task1: `SELECT name, role FROM employees where building is null;`
+
+#### Task2: `SELECT building_name FROM buildings LEFT JOIN employees ON building_name = building where role is null;`
