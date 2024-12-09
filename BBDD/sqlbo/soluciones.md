@@ -123,3 +123,11 @@
 #### Task1: `SELECT name, role FROM employees where building is null;`
 
 #### Task2: `SELECT building_name FROM buildings LEFT JOIN employees ON building_name = building where role is null;`
+
+## SQL Lesson 9: Queries with expressions
+
+#### Task1: `SELECT title, (domestic_sales+international_sales)/1000000 AS sales FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;`
+
+#### Task2:`SELECT title, (rating*10) AS rating_percent FROM movies JOIN boxoffice ON movies.id = boxoffice.movie_id;`
+
+#### Task3: `SELECT title, year FROM movies where year%2=0;`
