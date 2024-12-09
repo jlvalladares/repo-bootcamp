@@ -44,8 +44,12 @@
 
 ## SQL Review: Simple SELECT Queries
 
-#### Task1: `SELECT * FROM north_american_cities where country like 'canada';`
+#### Task1: `SELECT city, population FROM north_american_cities where country='Canada';`
 
 #### Task2: `SELECT * FROM north_american_cities where country like 'uni%' order by latitude desc;`
 
-#### Task3: ``
+#### Task3: `SELECT city,longitude FROM north_american_cities where longitude<-87.62 order by longitude desc;`
+
+#### Task4: `SELECT city, population FROM north_american_cities where country='Mexico' order by population desc limit 2;`
+
+#### Task5: `SELECT city, population FROM north_american_cities where country='United States' order by population desc limit 2 offset 2;`
