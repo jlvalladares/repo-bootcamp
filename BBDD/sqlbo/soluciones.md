@@ -126,8 +126,42 @@
 
 ## SQL Lesson 9: Queries with expressions
 
-#### Task1: `SELECT title, (domestic_sales+international_sales)/1000000 AS sales FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;`
+### Task1:
 
-#### Task2:`SELECT title, (rating*10) AS rating_percent FROM movies JOIN boxoffice ON movies.id = boxoffice.movie_id;`
+`SELECT title, (domestic_sales+international_sales)/1000000 AS sales FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;`
 
-#### Task3: `SELECT title, year FROM movies where year%2=0;`
+### Task2:
+
+`SELECT title, (rating*10) AS rating_percent FROM movies JOIN boxoffice ON movies.id = boxoffice.movie_id;`
+
+### Task3:
+
+`SELECT title, year FROM movies where year%2=0;`
+
+## SQL Lesson 10: Queries with aggregates (Pt. 1)
+
+### Task 1:
+
+`SELECT MAX(years_employed) AS max_años_empleado FROM employees;`
+
+### Task 2:
+
+`SELECT role, AVG(years_employed) FROM employees GROUP BY role;`
+
+### Task 3:
+
+`SELECT building, SUM(years_employed) FROM employees GROUP BY building;`
+
+## SQL Lesson 11: Queries with aggregates (Pt. 2)
+
+### Task 1:
+
+`SELECT role,COUNT(*) FROM employees WHERE role='Artist';`
+
+### Task 2:
+
+`SELECT role, COUNT(*) AS total_empleados FROM employees GROUP BY role;`
+
+### Task 3:
+
+`SELECT role, SUM(years_employed) FROM employees WHERE role='Engineer';`
