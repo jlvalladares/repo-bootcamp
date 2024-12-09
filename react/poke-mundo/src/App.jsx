@@ -1,50 +1,17 @@
-import React from "react";
-import "./App.css";
-import ListaDeCard from "./componets/ListaDeCard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ListaDeCard from "./pages/ListaDeCard";
 
 function App() {
-	const pokemon = [
-		{
-			nombre: "bulbasaur",
-			id: 1,
-			imagenUrl:
-				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-			tipo1: "grass",
-			tipo2: "poison",
-			evolucion: "parjarito",
-		},
-		{
-			nombre: "pikachu",
-			id: 1,
-			imagenUrl:
-				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-			tipo1: "grass",
-			tipo2: "poison",
-			evolucion: "parjarito",
-		},
-		{
-			nombre: "ivasaur",
-			id: 1,
-			imagenUrl:
-				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-			tipo1: "grass",
-			tipo2: "poison",
-			evolucion: "parjarito",
-		},
-		{
-			nombre: "raychu",
-			id: 1,
-			imagenUrl:
-				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-			tipo1: "grass",
-			tipo2: "poison",
-			evolucion: "parjarito",
-		},
-	];
 	return (
-		<>
-			<ListaDeCard pokemon={pokemon} />
-		</>
+		<BrowserRouter>
+			<div className="oreja_iz"></div>
+			<div className="oreja_de"></div>
+			<div className="mof_iz"></div>
+			<div className="mof_de"></div>
+			<Routes>
+				<Route path="/" element={<ListaDeCard />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
