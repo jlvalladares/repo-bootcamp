@@ -1,0 +1,38 @@
+## Ejercicio 1:
+
+1. Selecciona todos los registros de una tabla:
+   Consulta todas los datos de la tabla film .
+
+### Solución:
+
+`SELECT _ FROM film;` \
+`SELECT COUNT(_) AS cantidad FROM film;`
+
+## Ejercicio 2:
+
+1. Encuentra todas las películas con una duración ( length ) mayor a 120 minutos.
+
+### Solución:
+
+`SELECT title FROM film WHERE length>120;` \
+`SELECT COUNT(title) AS cantidad FROM film WHERE length>120;`
+
+2. Busca clientes cuyo apellido sea "Smith" en la tabla customer .
+
+### Solucion:
+
+`SELECT \* FROM customer WHERE last_name = 'SMITH';`
+
+## Ejercicio 3:
+
+1. Ordena las películas de film alfabéticamente por el título.
+
+### Solución:
+
+`SELECT * FROM film ORDER BY title asc;`
+
+2. Ordena las películas por duración de mayor a menor.
+
+### Solución:
+
+`SELECT * FROM film ORDER BY length asc;`
