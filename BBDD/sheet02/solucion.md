@@ -57,10 +57,10 @@
 
 ### Solución:
 
-`SELECT title FROM film WHERE rating='PG' OR rating='R';` 2. Muestra los clientes con last_name que terminen en "FORD".
+`SELECT title FROM film WHERE rating='PG' OR rating='R';`
+
+2. Muestra los clientes con last_name que terminen en "FORD".
 
 ### Solución:
 
 `SELECT customer_id, first_name FROM customer WHERE last_name LIKE '%FORD';`
-
-## Ejercico 6:
