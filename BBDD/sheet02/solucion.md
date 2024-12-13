@@ -62,3 +62,5 @@
 ### Solución:
 
 `SELECT customer_id, first_name FROM customer WHERE last_name LIKE '%FORD';`
+
+## Ejercico 6:
