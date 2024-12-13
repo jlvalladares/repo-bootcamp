@@ -36,3 +36,17 @@
 ### Solución:
 
 `SELECT * FROM film ORDER BY length asc;`
+
+## Ejercico 4:
+
+1. Cuenta cuántos actores hay en la tabla actor .
+
+### Solución:
+
+`SELECT COUNT(*) AS cantidad_actores FROM actor;`
+
+2. Encuentra la duración promedio de las películas en la tabla film .
+
+### Solución:
+
+`SELECT AVG(length) AS duraciion_promedio FROM film;`
