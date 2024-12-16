@@ -64,6 +64,7 @@
 ### Solución:
 
 `SELECT customer_id, first_name FROM customer WHERE last_name LIKE '%FORD';`
+<<<<<<< HEAD
 
 ## Ejercico 6:
 
@@ -72,3 +73,5 @@ Muestra el nombre completo de los actores y los títulos de las películas en la
 ### Solución:
 
 ``
+=======
+>>>>>>> feat/BBDD-sheet02-sakila
