@@ -1,14 +1,19 @@
-class Estudiante extends Persona{
+public class Estudiante extends Persona implements Imprimible{
     String grado;
-    //constructor que llama al padre Persona
+    
     public Estudiante (String nombre, int edad, String grado){
         super(nombre, edad);
         this.grado = grado;
     }
-    //sobre escribir metodo para mostraDetalles()
+    
+    public String getGrado() {
+        return grado;
+    }
+
     @Override
-    public void mostrarDetalles(){
-        super.mostrarDetalles();
+    public void imprimir() {
+        System.out.println("Imprimiendo detalles del estudiante:");
+        mostrarDetalles();
         System.out.println("Grado: " + grado);
     }
 }

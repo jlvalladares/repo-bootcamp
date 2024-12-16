@@ -1,3 +1,4 @@
-public interface Imprimible {
 
+public interface Imprimible {
+    void imprimir();
 }
